@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<meta charset="utf-8" name="viewport"
+		content="width=device-width, initial-scale=1"
+		http-equiv="X-UA-Conpatible" />
+	<title>Menu</title>
+	<h:outputStylesheet library="css" name="bootstrap.min.css"></h:outputStylesheet>
+</h:head>
+
+
+<h:body>
+	<h:form>
+		<h1>PAGINA DE LOGIN</h1>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="Usuário: "/>
+			<h:inputText value="#{loginController.usuario}" />
+			<h:outputLabel value="Senha: "/>
+			<h:inputSecret value="#{loginController.senha}" />
+			<h:commandButton 
+				action="#{loginController.entrar}"  
+				value="Entrar"/>
+			<h:commandButton  
+				action="#{loginController.limpar}"
+				value="Limpar"/>
+		</h:panelGrid>
+	</h:form>
+</h:body>
+
+</html>
